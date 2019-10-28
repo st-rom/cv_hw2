@@ -1,6 +1,6 @@
 # cv_hw2
 
-# HomeWork 2 - Computer Vision
+# <center>HomeWork 2 - Computer Vision</center>
 
 
 # Task 1. Multiclass Semantic Segmentation
