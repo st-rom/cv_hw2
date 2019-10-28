@@ -26,3 +26,4 @@ I also experimented with batch sizes, other loss functions, decoder blocks etc.
 ### Discussion (what worked, what didn't work, how to improve)
 After trying different parameters on our model which I already mentioned in Experiment log, I chose the ones that left in the file. Due to the problem that training takes a lot of time and computational power, the model isn't the best it could be, but at least I know in which direction I should be moving further to improve it(experimenting more with model layers, trying more hyperparameters values, etc).
 ![alt text](https://github.com/st-rom/cv_hw2/blob/master/imgs/poker.jpg)
+Після 20 епох: val_loss: 0.123, val_dice: 0.938, val_jaccard: 0.891
