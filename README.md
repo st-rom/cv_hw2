@@ -18,6 +18,7 @@ We do the reduction of dimensionality 5 times to extract the most important feat
 We apply horizontal flip augmentation to our train dataset. After shuffling the data we train our model on it with batch size equal to 4. We use every tenth picture(10%) as part of our validation set. Augmentation isn't applied to it. Also we use Adam optimizer and Binary Cross Entropy with logits as our loss function. Also we use Dice and Jaccard loss which will give us a lot better understanding of how accurate our model is.
 
 ### Experiment log
+Firstly, I tried other models like UNet16 and UNet11 but ResNet32 was the best in this case.<br>
 I didn't use any other types of augmentation on our images since they would make our model worse by learning it on features that aren't usual(in transposed or vertically flipped images) also scaling isn't an option because it can crop important parts of an image.<br>
 With lesser learning rate our epochs training time is bigger and the result isn't better and when I took bigger learning rate dice and jaccard loss gave pretty bad results, so the optimal learning rate in my case was equal to 0.001. <br>
 I also experimented with batch sizes, other loss functions, decoder blocks etc.
