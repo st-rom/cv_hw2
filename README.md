@@ -19,6 +19,7 @@ We apply horrizontal flip augmentation to out train dataset. After shuffling the
 
 ### Experiment log
 I didn't use any other types of augmentation on our images since they would make our model worse by learning it on features that aren't usual(in transposed or vertically flipped images) also scaling isn't an option because it can crop important parts of an image.
+With lesser learning rate our epochs training time is bigger and the result isn't better and when I took bigger learning rate dice and jaccard loss gave pretty bad results, so the optimal learing rate in my case was equal to 0.001. 
+I also experimented with batch sizes, other loss functions, decoder blocks etc.
 
 ### Discussion (what worked, what didn't work, how to improve)
-With lesser learning rate our epochs training time is bigger and the result isn't better and when I took bigger learning rate dice and jaccard loss gave pretty bad results, so the optimal learing rate in my case was equal to 0.001. 
