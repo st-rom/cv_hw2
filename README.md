@@ -1,6 +1,6 @@
 #### cv_hw2
 
-# <center>HomeWork 2 - Computer Vision</center>
+# HomeWork 2 - Computer Vision
 
 
 ## Task 1. Multiclass Semantic Segmentation
@@ -18,8 +18,9 @@ We do the reduction of dimentionality 5 times to extract the most important feat
 We apply horrizontal flip augmentation to out train dataset. After shuffling the data we train our model on it with batch size equal to 4. We use every tenth picture(10%) as part of our validation set. Augmentation isn't applied to it. Also we use Adam optimizer and Binary Cross Entropy with logits as our loss function. Also we use Dice and Jaccard loss which wil give us a lot better understanding of how accurate our model is.
 
 ### Experiment log
-I didn't use any other types of augmentation on our images since they would make our model worse by learning it on features that aren't usual(in transposed or vertically flipped images) also scaling isn't an option because it can crop important parts of an image.
-With lesser learning rate our epochs training time is bigger and the result isn't better and when I took bigger learning rate dice and jaccard loss gave pretty bad results, so the optimal learing rate in my case was equal to 0.001. 
+I didn't use any other types of augmentation on our images since they would make our model worse by learning it on features that aren't usual(in transposed or vertically flipped images) also scaling isn't an option because it can crop important parts of an image.<br>
+With lesser learning rate our epochs training time is bigger and the result isn't better and when I took bigger learning rate dice and jaccard loss gave pretty bad results, so the optimal learing rate in my case was equal to 0.001. <br>
 I also experimented with batch sizes, other loss functions, decoder blocks etc.
 
 ### Discussion (what worked, what didn't work, how to improve)
+After trying different parameters on our model which I already metioned in Experiment log, I chose the ones that left in the file. Due to the problem that training takes a lot of time and computational power, the model isn't the best it could be, but at least I know in which direction I should be moving further to improve it(experimenting more with model layers, trying more hyperparameters values, etc).
